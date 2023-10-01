@@ -1,6 +1,5 @@
 {
   "name": "git",
-  "leftToRight": true,
   "noLazyMode": true,
   "words": [
     "git",
@@ -20,7 +19,6 @@
     "rebase",
     "reflog",
     "remote",
-    "reset",
     "revert",
     "status",
     "diff",

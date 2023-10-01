@@ -7,12 +7,15 @@
   top: 0;
   z-index: 1000;
   display: grid;
-  justify-content: center;
+  justify-items: center;
   align-items: start;
-  padding: 5rem 0;
+  padding: 5rem 2rem;
+  grid-template-columns: 1fr;
+  transition: background 0.125s;
 
   #commandInput {
-    width: 700px;
+    max-width: 600px;
+    width: 100%;
     background: var(--bg-color);
     border-radius: var(--roundness);
 
@@ -25,6 +28,9 @@
       font-size: 1rem;
       width: 100%;
       border-radius: var(--roundness);
+      &:focus-visible {
+        box-shadow: none;
+      }
     }
 
     .shiftEnter {
@@ -37,9 +43,13 @@
   }
 
   #commandLine {
-    width: 700px;
+    max-width: 600px;
+    width: 100%;
     background: var(--bg-color);
     border-radius: var(--roundness);
+    // outline: 0.25rem solid transparent;
+    box-shadow: 0 0 0 0.2em transparent;
+    transition: outline 0.125s;
 
     .searchicon {
       color: var(--sub-color);
@@ -55,6 +65,9 @@
       font-size: 1rem;
       width: 100%;
       border-radius: var(--roundness);
+      &:focus-visible {
+        box-shadow: none;
+      }
     }
 
     .separator {
@@ -78,6 +91,7 @@
       max-height: calc(100vh - 10rem - 3rem);
       display: grid;
       cursor: pointer;
+      -webkit-user-select: none;
       user-select: none;
 
       .entry {
@@ -100,10 +114,12 @@
           margin-right: 0.5rem;
           text-align: center;
           width: 1.25em;
+          color: var(--sub-color);
         }
 
         .fas {
           margin-right: 0.5rem;
+          color: var(--sub-color);
         }
 
         &:last-child {
@@ -111,14 +127,34 @@
         }
 
         &.activeMouse {
-          color: var(--bg-color);
-          background: var(--text-color);
+          color: var(--bg-color) !important;
+          background: var(--text-color) !important;
           cursor: pointer;
+          .fas,
+          .far,
+          .fab {
+            color: var(--bg-color);
+          }
         }
 
         &.activeKeyboard {
-          color: var(--bg-color);
-          background: var(--text-color);
+          color: var(--bg-color) !important;
+          background: var(--text-color) !important;
+          .fas,
+          .far,
+          .fab {
+            color: var(--bg-color);
+          }
+        }
+
+        &.active {
+          color: var(--bg-color) !important;
+          background: var(--text-color) !important;
+          .fas,
+          .far,
+          .fab {
+            color: var(--bg-color);
+          }
         }
 
         // &:hover {
@@ -126,7 +162,30 @@
         //   background: var(--sub-color);
         //   cursor: pointer;
         // }
+
+        &.withThemeBubbles {
+          grid-template-columns: auto 1fr auto;
+          .themeBubbles {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 0.5em;
+            border-radius: 1em;
+            .themeBubble {
+              width: 1em;
+              height: 1em;
+              border-radius: 100%;
+            }
+          }
+        }
       }
+    }
+  }
+
+  &.noBackground {
+    background: none;
+    #commandLine {
+      box-shadow: 0 0 0 0.2em var(--sub-alt-color);
+      // outline: 0.25rem solid var(--sub-alt-color);
     }
   }
 }

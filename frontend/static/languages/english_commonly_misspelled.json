@@ -1,8 +1,8 @@
 {
   "name": "english_commonly_misspelled",
-  "leftToRight": true,
   "_comment": "Sourced from: https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings",
   "noLazyMode": true,
+  "orderedByFrequency": false,
   "words": [
     "caused",
     "ultimately",
@@ -406,7 +406,6 @@
     "exciting",
     "fulfill",
     "several",
-    "humour",
     "voluntary",
     "particular",
     "always",
@@ -882,7 +881,6 @@
     "possibilities",
     "language",
     "variant",
-    "honour",
     "characters",
     "breakthrough",
     "preparations",
@@ -896,7 +894,6 @@
     "clinical",
     "traffic",
     "establishing",
-    "behaviour",
     "classic",
     "ordered",
     "plantation",
@@ -1428,7 +1425,6 @@
     "required",
     "provided",
     "dream",
-    "license",
     "excel",
     "upon",
     "transcription",
@@ -1539,7 +1535,6 @@
     "implemented",
     "especially",
     "proprietary",
-    "license",
     "instruction",
     "philosophy",
     "universities",
@@ -1740,6 +1735,7 @@
     "assume",
     "align",
     "arbitrary",
-    "provision"
+    "provision",
+    "license"
   ]
 }
